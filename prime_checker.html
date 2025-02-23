@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>Prime Number Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prime Number Checker</h1>
+        <input type="number" id="input" placeholder="Enter a number">
+        <button onclick="cPrime()">Check</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+
+        function cPrime(){
+            var num = parseInt(document.getElementById("input").value);
+            var result = document.getElementById("result");
+
+            if(isNaN(num) || num <= 1){
+                result.innerHTML = "Invalid input. Please enter a positive integer.";
+                return;
+            }
+            
+            var isPrime = true;
+            for(var i = 2; i <= Math.sqrt(num); i++){
+                if(num % i === 0){
+                    isPrime = false;
+                    break;
+                }
+            }
+            
+            if(isPrime){
+                result.innerHTML = num + " is a prime number.";
+            }
+            else{
+                result.innerHTML = num + " is not a prime number.";
+            }
+        }
+    </script>
+</body>
+</html>

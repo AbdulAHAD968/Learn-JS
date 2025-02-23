@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTER APPLICATION</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1679b2;
+        }
+
+        .container{
+            width: 400px;
+            align-items: center;
+            background-color: #4bc037;
+            padding: 20px;
+            border-radius: 10px;
+            /* shadow */
+            box-shadow: 0 4px 8px 0 rgb(255, 171, 2), 0 6px 20px 0 rgb(255, 207, 73);
+        }
+
+        .counter{
+            width: 400px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: #fc9b00;
+            font-size: 50px;
+            color: #bfd11b;
+            border-radius: 10px;
+            /* shadow */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        button{
+            width: 100px;
+            height: 50px;
+            background-color: #27ae60;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            /* shadow */
+            box-shadow: 0 4px 8px 0 rgba(216, 60, 255, 0.993), 0 6px 20px 0 rgb(248, 255, 31);
+        }
+
+        /* hover effect */
+        button:hover {
+            background-color: #c023e0;
+            transition: transform 0.3s ease; 
+            transform: translateY(-6px);
+        }
+
+        h1{
+            text-align: center;
+            color: #a42b92;
+        }
+
+        p{
+            text-align: center;
+            color: #1c77e6;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Counter Application</h1>
+        <p>Current Counter: <span id="counter">0</span></p>
+
+        <div class="counter">
+            <button onclick="inc()">Increment</button>
+            <button onclick="dec()">Decrement</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+
+        <script>
+
+            let counter = 0;
+
+            // incriment the count
+            function inc(){
+                counter++;
+                update_me();
+            }
+
+            // decriment the count
+            function dec(){
+                if(counter > 0){
+                    counter--;
+                }
+                update_me();
+            }
+
+            // reset the counteer
+            function reset(){
+                counter = 0;
+                update_me();
+            }
+
+            function update_me(){
+                document.getElementById('counter').innerText = counter;
+            }
+
+            update_me();
+        </script>
+        
+    </div>
+    
+</body>
+</html>
