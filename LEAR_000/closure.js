@@ -4,16 +4,16 @@
 // even after the outer function has finished executing. 
 // This enables functions to “remember” their environment.
 
-// function fun1(){
-//     let o = "hello world";
-//     console.log(o);
-//     function fun2(){
-//         console.log(o);
-//     }
-//     return fun2;
-// }
-// const help = fun1();
-// help();
+function fun1(){
+    let o = "hello world";
+    console.log(o);
+    function fun2(){
+        console.log(o);
+    }
+    return fun2;
+}
+const help = fun1();
+help();
 
 
 //NOTE - Lexical Scoping
@@ -22,54 +22,54 @@
 // it is executed. This allows inner functions to access variables 
 // from their outer function.
 
-// function outer() {
-//     const outerVar = 'I am from outer';
+function outer() {
+    const outerVar = 'I am from outer';
 
-//     function inner() {
-//         console.log(outerVar);
-//   }
-//     return inner;
-// }
-// const newClosure = outer();
-// newClosure();
+    function inner() {
+        console.log(outerVar);
+  }
+    return inner;
+}
+const newClosure = outer();
+newClosure();
 
 
 //NOTE - Private Variables
 // Closures can encapsulate variables, making them private to a 
 // specific function. This is commonly used in module patterns.
 
-// function counter(){
-//     let count = 0;
-//     return function(){
-//         count++;
-//         return count;
-//     };
-// };
-// let raise = counter();
-// console.log(raise());
-// console.log(raise());
-// console.log(raise());
+function counter(){
+    let count = 0;
+    return function(){
+        count++;
+        return count;
+    };
+};
+let raise = counter();
+console.log(raise());
+console.log(raise());
+console.log(raise());
 
 
 //NOTE - Closures and IIFE
-// const counter = ( function(){
-//     let count=0;
+const counter = ( function(){
+    let count=0;
 
-//     return{
-//         increment: function(){
-//             count++;
-//             console.log(`incremented the counter ${count}`);
-//         },
-//         reset: function(){
-//             count=0;
-//             console.log(`reset the counter ${count}`);
-//         }
-//     }
-// } () );
-// counter.increment();
-// counter.increment();
-// counter.increment();
-// counter.reset();
+    return{
+        increment: function(){
+            count++;
+            console.log(`incremented the counter ${count}`);
+        },
+        reset: function(){
+            count=0;
+            console.log(`reset the counter ${count}`);
+        }
+    }
+} () );
+counter.increment();
+counter.increment();
+counter.increment();
+counter.reset();
 
 
 //NOTE - BEEFITS:

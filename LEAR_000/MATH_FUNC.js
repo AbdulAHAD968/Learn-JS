@@ -1,80 +1,80 @@
 //SECTION - HOW TO TAKE INPUT IN TERMINAL OF NODE.JS
 
-// const take = require('readline-sync');
-// const num1 = parseFloat(take.question('ENTER ANGLE:'));
-// console.log(num1);
+const take = require('readline-sync');
+const num1 = parseFloat(take.question('ENTER ANGLE:'));
+console.log(num1);
 
 // TAKING SIN THETA USING MATH.
-//console.log(`SIN(${num1}°) = ${Math.sin(num1 * Math.PI / 180)}`);
-// console.log(Math.sin(num1));
+console.log(`SIN(${num1}°) = ${Math.sin(num1 * Math.PI / 180)}`);
+console.log(Math.sin(num1));
 
 
 
 //NOTE - THE STD VALUE OF PI.
-// let value = Math.PI;
-// console.log(value);
+let value = Math.PI;
+console.log(value);
 //Output : 3.141592653589793
 
 
 //NOTE - EULER NUMBER.
-// let value = Math.E;
-// console.log(value);
+value = Math.E;
+console.log(value);
 //Output : 2.718281828459045
 
 
 //NOTE - THE LOG(2)
-// let value = Math.LN2;
-// console.log(value);
+value = Math.LN2;
+console.log(value);
 //Output : 0.6931471805599453
 
 
 //NOTE - LOG(10)
-// let value = Math.LN10;
-// console.log(value);
+value = Math.LN10;
+console.log(value);
 //Output : 2.302585092994046
 
 
 //NOTE - LOG2E
-// let value = Math.LOG2E;
-// console.log(value);
+value = Math.LOG2E;
+console.log(value);
 //Output : 1.4426950408889634
 
 
 //NOTE - LOG10E
-// let value = Math.LOG10E;
-// console.log(value);
+value = Math.LOG10E;
+console.log(value);
 //Output : 0.4342944819032518
 
 
 //NOTE - RANDOM NUMBER GENERATION.
 // Math.random() ∈ [0, 1)
 // IT ALWAYS GENERATES RANDOM NUMBER BETWEEN 0 AND 1.
-// let num = parseInt(Math.random() % 100);
-// console.log(`RANDOM NUMBER: ${num}`);
+let num = parseInt(Math.random() % 100);
+console.log(`RANDOM NUMBER: ${num}`);
 
 
 //NOTE - GET THE ABSOLUTE VALUE.
-// let value = Math.abs(-2.7);
-// console.log(value);
+value = Math.abs(-2.7);
+console.log(value);
 //Output : 2.7
 
 
 //NOTE - THE SQUARE ROOT FUNCTION.
-// let value = Math.sqrt(15);
-// console.log(value);
-// //Output : 3.872983346207417
-// value = Math.sqrt(36);
-// console.log(value);
+value = Math.sqrt(15);
+console.log(value);
+//Output : 3.872983346207417
+value = Math.sqrt(36);
+console.log(value);
 // //Output : 6
 
 
 //NOTE - THE POWER FUNCTION.
 // SYNTAX = pow(base, exponent)
-// let value = Math.pow(2,3);
-// console.log(value);
+value = Math.pow(2,3);
+console.log(value);
 // //Output : 8
-// value = Math.pow(4,2);
-// console.log(value);
+value = Math.pow(4,2);
+console.log(value);
 // //Output : 16
 
 
